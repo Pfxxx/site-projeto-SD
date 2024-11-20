@@ -1,3 +1,13 @@
+:root {
+  --background: #000;
+  --foreground: #FFF;
+}
+
+:root.light {
+  --background: #FFF;
+  --foreground: #000; 
+}
+
 /* ESTILO GERAL */
 *{
     margin: 0;
@@ -7,8 +17,12 @@
 }
 
 body{
-    background-color: black;
+    background-color: var(--background);
     height: 100vh;
+}
+
+button {
+    cursor: pointer;
 }
 
 .menu{
@@ -22,22 +36,27 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 h2.titulo   {
-    color: #fff;
+    color: var(--foreground);
     font-size: 38px;
     text-align: center;
 }
-h2.titulo span{
+
+h2.titulo span {
     color: #199214;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 /* cabeçalho */
 
-header{
+header {
     padding: 30px 4%;
-
+    display: flex;
+    align-items: center;
 }
 
 header > .menu {
@@ -46,11 +65,7 @@ header > .menu {
     justify-content: space-between;
 }
 
-.logo:hover{
-    transform: scale(1.2);
-}
-
-header a{
+header a {
     color: #7c7c7c;
     text-decoration: none;
     display: inline-block;
@@ -58,6 +73,7 @@ header a{
     font-size: 25px;
     margin-right: 110px;
 }
+
 header a:hover{
     color: #199214;
     transform: scale(1.10);
@@ -72,11 +88,21 @@ header nav ul li{
     padding: 0 40px;
 }
 
+header button.theme-button {
+  height: 40px;
+  width: 120px;
+  background-color: #199214;
+  color: var(--foreground);
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
 header .ph-contato button{
     padding: 25px 40px;
     font-size: 18px;
     font-weight: 700;
-    background-color:#fff;
+    background-color:var(--foreground);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -88,38 +114,23 @@ box-shadow: 0px 0px 8px #18921475;
 
 /* ESTILO TOPO DO SITE */
 
-section.txt-site-top{
-    padding: 40px 4%;
+section.site-top {
+  padding-left: 94.875px;
+  color: var(--foreground);;
 }
 
-.txt-site-top h1{
-    color: #fff;
-    font-size: 50px;
-    line-height: 40px;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 80%;
-    margin-left: 10px;
+section.site-top h1 {
+  font-size: 50px;
 }
 
-section.txt-site-top .flex{
-    align-items: center; 
-    justify-content: center;
-    gap: 100px;
-    margin: 0;
+section.site-top h1 span {
+  color: #199214;
 }
 
-.txt-site-top h1 span{
-    color: #199214;
-}
-
-.txt-site-top p{ 
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    margin: 0 auto;
-    margin-left: 270px;
-}
+section.site-top p {
+  font-size: 30px;
+  width: 400px;
+} 
 
 .flex {
     display: flex;
@@ -127,24 +138,12 @@ section.txt-site-top .flex{
     align-items: center; 
 }
 
-.txt-site-top {
-    flex: 1; 
-}
-
 .img-site-top {
-    flex: 1; 
-    text-align: right; 
-    margin-left: 370px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
 }
-
-.img-site-top img {
-    max-width: 100%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto;
-    margin-right: 450px;
-}
-
 /* ESTILO SKILLS */
 
 section.skills{
@@ -155,16 +154,17 @@ section.skills .flex{
 
 }
 .skills .skills-box{
-    color: #fff;
+    color: var(--foreground);
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
     transition: .2s;
 }
+
 .skills .skills-box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 8px #ffffff71;
 }
+
 .skills .skills-box i{
     font-size: 40px;
     color: #199214;
@@ -188,8 +188,7 @@ section.sobre .flex{
     margin-left: 40px;
 }
 .txt-sobre {
-    color: #fff;
-    
+    color: var(--foreground);
 }
 .txt-sobre h2{ 
     font-size: 45px;
@@ -202,7 +201,7 @@ section.sobre .flex{
 }
 .txt-sobre p{
     margin: 10px 0;
-    color: #000000;
+    color: var(--foreground);
 }
 .txt-sobre .ph-social {
     display: flex;             
@@ -224,7 +223,8 @@ section.sobre .flex{
     transition: all 0.3s ease; 
 }
 .txt-sobre .ph-social button i{
-    color: #000000;
+  font-size: 20px;
+  color: var(--background);
 }
 /* ESTILO PROJETOS */
 section.projetos{
@@ -235,7 +235,7 @@ section.projetos .flex{
 
 }
 .projetos .projetos-box{
-    color: #fff;
+    color: var(--foreground);
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
@@ -243,10 +243,13 @@ section.projetos .flex{
 }
 .projetos .projetos-box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 8px #ffffff71;
 }
 
-.projetos .projetos-box p{
-    font-size: 14px;
-    margin: 15px 0;
+.projetos .projetos-box ul {
+  margin-top: 20px;
+  margin-left: 20px;
+} 
+
+.projetos .projetos-box ul li {
+  font-size: 14px;
 }

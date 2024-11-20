@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--FIM ICONS-->
     <link rel="stylesheet" href="style.css">
-    <title>Portfólio Pedro Henrique</title>
+    <title>Projeto 5's</title>
 </head>
 
 <body>
@@ -41,48 +41,41 @@
                 </a>
             </div>
         </div><!--menu-->
+
+        <button class="theme-button" onClick="switchTheme()">Trocar tema</button>
     </header>
     <main>
-        <section class="the-site-top">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-site-top">
-                        <h1>OLÁ<span>,</span></h1>
-                        <p>Seja bem vindo(a) ao nosso Projeto de Sistemas Digitais!</p>
-                    </div><!--txt site top-->
-                    <div class="img-site-top">
-                        <img src="images/foto projeto .jpg" alt="" width="600">
-                    </div><!--site top-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--topo do site-->
         <section class="projetos">
            <interface class="interface">
              <h2 class="titulo">O <span>PROJETO</span></h2>
+              <div class="img-site-top">
+                  <img src="images/foto projeto .jpg" alt="" width="600">
+              </div><!--site top-->
+
               <div class="projetos-box">
                  <h3>COMPONENTES</h3>
-                 <p> 21x jumpers
-                    - 1x ⁠Placa arduino uno
-                    - ⁠1x Protoboard
-                    - ⁠1x Led vermelho
-                    - ⁠1x Led amarelo
-                    - ⁠1x Led verde
-                    - ⁠4x Resistores 1ko
-                    - ⁠1x Visor de sete segmentos
-                    - ⁠1x Botão</p>
+
+                <ul>
+                  <li>21x Jumpers</li>
+                  <li>1x Placa arduino UNO</li>
+                  <li>1x Protoboard</li>
+                  <li>1x Led vermelho</li>
+                  <li>1x Led amarelo</li>
+                  <li>1x Led verde</li>
+                  <li>4x Resistores 1ko</li>
+                  <li>1x Visor de sete segmentos</li>
+                  <li>1x Botão</li>
+                </ul>
               </div><!--projetos-box-->
               <div class="projetos-box">
                  <h3>LINK DO CÓDIGO</h3>
                  <p><a href="https://github.com/acferM/SD-2024" target="_blank">CÓDIGO PROJETO</a></p>
                </div><!--projetos-box-->
-              <div class="projetos-box">
-                 <h3>TUTORIAL DO PROJETO</h3>
-                 <p>Desenvolvi um Menu para um cárdapio de cafeteria como desafio em uma das matéias propostas pelo faculdade, utilizei diversos segmentos para realizar a atividade!</p>
-               </div><!--projetos-box-->
            </interface>        
         </section>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
